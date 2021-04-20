@@ -34,7 +34,7 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 - Join [C4 Discord](https://discord.gg/EY5dvm3evD) to register
 - Submit findings [using the C4 form](https://c4-vader.netlify.app/)
 - [Read our guidelines for more details](https://code423n4.com/compete)
-- Starts 2021-04-2 T00:00:00 UTC
+- Starts 2021-04-22 00:00:00 UTC
 - Ends 2021-04-28 23:59:00 UTC
 
 This repo will be made public before the start of the contest.
