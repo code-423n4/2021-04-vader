@@ -30,7 +30,7 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 # Vader contest details
 - 24 ETH main award pot
 - 3 ETH gas optimization award pot
-- 100k VETH bonus pot
+- 1000 VETH bonus pot
 - Join [C4 Discord](https://discord.gg/EY5dvm3evD) to register
 - Submit findings [using the C4 form](https://c4-vader.netlify.app/)
 - [Read our guidelines for more details](https://code423n4.com/compete)
