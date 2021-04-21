@@ -1,5 +1,3 @@
----
-
 # Vader contest details
 - 24 ETH main award pot
 - 3 ETH gas optimization award pot
