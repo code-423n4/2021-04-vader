@@ -43,7 +43,7 @@ VADER is an implementation of various ideas across the space. There is nothing *
 
 ## Known Deviations From Spec
 *will be updated if this list changes*
-1) USDV staking is still present in the code, this will be removed for SYNTH-only staking in a separate Vault. 
+1) *removed*
 2) Anchor pool creation is not curated
 3) *removed*
 4) Interest Rate deductions not yet added
@@ -57,9 +57,10 @@ VADER is an implementation of various ideas across the space. There is nothing *
 
 Ideally, the following is reviewed:
 * Any attack vectors that can siphon funds from the system
-* Any attack vectors using flash loans
-* Any attack vectors by Anchor Price manipulation
-* Any attack vectors by VADER<>USDV mint/burn
+* Any attack vectors that can lock funds in the system
+* Any attack vectors using flash loans on Anchor price, synths or lending
+* Any attack vectors by Anchor Price manipulation to cause run-away inflation or erosion of the VADER<>USDV peg
+* Any attack vectors by VADER<>USDV mint/burn that can exploit synths/lending
 
 ## Known Issues
 
