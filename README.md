@@ -28,6 +28,31 @@ https://github.com/thorchain/Resources/blob/master/Audits/THORChain-Gauntlet-CLP
 ## Synths
 * Synthetic Assets minted from liquidity collateral using a formula that mints on the assymetric value of the deposited asset, based on the mean of the deposit values, but where one side is 0.
 
+Synthetic Asset && Liquidity Ownership formula:
+```
+How to derive liquidity units
+// Get MEAN
+P = poolUnits
+b = baseAdded, B = baseDepthBefore, baseAddedRate = b / B
+a = assetAdded, A = assetDepthBefore, assetAddedRate = a / A
+
+/ Get SLIP
+slipAdjustment = 1- abs(Ba−bA / ((b+B) * (a+A))) // Change in price irrespective of direction
+
+// Get units
+units = P * average(baseAddedRate + assetAddedRate) * slipAdjustment
+units = P*(( b /  B) + ( a /  A))/2 * slipAdjustment
+units = (P (a B + A b))/(2 A B) * slipAdjustment
+units = (P (a B + A b))/(2 A B) * 1 - abs(Ba−bA / ((b+B) * (a+A)))
+
+Special case when a = 0 (such as when minting synths)
+a = 0
+units = (P (0 B + A b))/(2 A B) * 1- abs(B0−bA / ((b+B) * (a0+A)))
+units = (P (A b))/(2 A B) * 1 - abs(bA / ((b+B) * (A)))
+units = (P b)/(2 B) * 1 - (b /(b+B))
+units = (P b)/(2 (b + B))
+```
+
 ## Lending
 * Borrowing debt is faciliated by depositing an asset (VADER, USDV, SYNTH) and borrowing BASE collateral from the protocol. The collateral is priced in its respective BASE asset. 
 * The member then has to pay it back, but priced in Debt Value and not in Base Value. Thus the protocol takes the short position on its own asset. 
